@@ -48,7 +48,7 @@ final class Command
 
     public function hasOption(string $short, string $long): bool
     {
-        return count(array_filter($this->elements, fn (Element $element): bool => $element->isOption() && in_array($element->name(), [$short, $long]))) === 1;
+        return count(array_filter($this->elements, fn (Element $element): bool => $element->isOption() && in_array($element->name(), [$short, $long], true))) === 1;
     }
 
     public function flag(string $name): self
@@ -67,6 +67,6 @@ final class Command
 
     public function hasFlag(string $short, string $long): bool
     {
-        return count(array_filter($this->elements, fn (Element $element): bool => $element->isFlag() && in_array($element->name(), [$short, $long]))) === 1;
+        return count(array_filter($this->elements, fn (Element $element): bool => $element->isFlag() && in_array($element->name(), [$short, $long], true))) === 1;
     }
 }
