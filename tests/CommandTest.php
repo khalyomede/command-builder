@@ -101,7 +101,7 @@ test("can output command with long options in POSIX style", function (): void {
 });
 
 // has flag
-test("returns true if long flag is present", function(): void {
+test("returns true if long flag is present", function (): void {
     $command = new Command("composer");
 
     $command->longFlag("dev")
@@ -110,7 +110,7 @@ test("returns true if long flag is present", function(): void {
     expect($command->hasFlag("d", "dev"))->toBeTrue();
 });
 
-test("returns true if short flag is present", function(): void {
+test("returns true if short flag is present", function (): void {
     $command = new Command("composer");
 
     $command->flag("d")
@@ -119,7 +119,7 @@ test("returns true if short flag is present", function(): void {
     expect($command->hasFlag("d", "dev"))->toBeTrue();
 });
 
-test("returns false if flag is missing", function(): void {
+test("returns false if flag is missing", function (): void {
     $command = new Command("composer");
 
     $command->option("d", "source");
@@ -128,7 +128,7 @@ test("returns false if flag is missing", function(): void {
 });
 
 // has option
-test("returns true if long option is present", function(): void {
+test("returns true if long option is present", function (): void {
     $command = new Command("composer");
 
     $command->longOption("apcu-prefix", "app")
@@ -137,7 +137,7 @@ test("returns true if long option is present", function(): void {
     expect($command->hasOption("a", "apcu-prefix"))->toBeTrue();
 });
 
-test("returns true if short option is present", function(): void {
+test("returns true if short option is present", function (): void {
     $command = new Command("composer");
 
     $command->longOption("a", "app")
@@ -146,7 +146,7 @@ test("returns true if short option is present", function(): void {
     expect($command->hasOption("a", "apcu-prefix"))->toBeTrue();
 });
 
-test("returns false if option is missing", function(): void {
+test("returns false if option is missing", function (): void {
     $command = new Command("composer");
 
     $command->flag("a");
