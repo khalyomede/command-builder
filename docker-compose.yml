@@ -1,0 +1,23 @@
+version: "3"
+services:
+  composer74:
+    build: ./docker/php/7.4
+    entrypoint: composer
+    volumes:
+      - .:/home/ubuntu/app
+    working_dir: /home/ubuntu/app
+
+  composer80:
+    build: ./docker/php/8.0
+    entrypoint: composer
+    volumes:
+      - .:/home/ubuntu/app
+    working_dir: /home/ubuntu/app
+
+  composer:
+    build: ./docker/php/8.1
+    entrypoint: composer
+    volumes:
+      - .:/home/ubuntu/app
+      - ./docker-data/tmp/infection:/tmp/infection
+    working_dir: /home/ubuntu/app
