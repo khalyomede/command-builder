@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2022-01-20
+
+### Fixed
+
+- Switch from `CommandBuilder` to `Khalyomede\CommandBuilder` namespace like documented ([e60b52b](https://github.com/khalyomede/command-builder/commit/e60b52b88199921113ddded9c6861c4737c6a021)).
+
 ## [0.2.0] - 2022-01-20
 
 ### Added
