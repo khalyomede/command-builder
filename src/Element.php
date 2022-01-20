@@ -42,6 +42,11 @@ final class Element
         throw new Exception("Unknown element type {$this->elementType}.");
     }
 
+    public function isArgument(): bool
+    {
+        return $this->elementType === ElementType::ARGUMENT;
+    }
+
     public function isFlag(): bool
     {
         return $this->elementType === ElementType::FLAG;

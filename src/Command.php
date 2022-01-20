@@ -32,6 +32,11 @@ final class Command
         return $this;
     }
 
+    public function argumentCount(): int
+    {
+        return count(array_filter($this->elements, fn (Element $element): bool => $element->isArgument()));
+    }
+
     public function option(string $name, string $value): self
     {
         $this->elements[] = new Element($this->style, ElementType::OPTION, $name, $value);

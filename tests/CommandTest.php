@@ -153,3 +153,14 @@ test("returns false if option is missing", function (): void {
 
     expect($command->hasOption("a", "apcu-prefix"))->toBeFalse();
 });
+
+test("returns number of arguments", function (): void {
+    $command = new Command("composer");
+
+    $command
+        ->argument("require")
+        ->argument("laravel/laravel")
+        ->longFlag("dev");
+
+    expect($command->argumentCount())->toEqual(2);
+});
