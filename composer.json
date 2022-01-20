@@ -1,7 +1,7 @@
 {
     "name": "khalyomede/command-builder",
     "description": "Create executable strings using a fluent API.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
