@@ -1,6 +1,6 @@
 <?php
 
-namespace CommandBuilder;
+namespace Khalyomede\CommandBuilder;
 
 use Exception;
 

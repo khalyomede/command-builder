@@ -1,7 +1,7 @@
 <?php
 
-use CommandBuilder\Element;
-use CommandBuilder\Standard;
+use Khalyomede\CommandBuilder\Element;
+use Khalyomede\CommandBuilder\Standard;
 
 test("throws an exception if the element type is unknown", function (): void {
     expect(fn (): string => (string) new Element(Standard::GNU, "foo", "", "", false))

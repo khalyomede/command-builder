@@ -1,7 +1,7 @@
 <?php
 
-use CommandBuilder\Command;
-use CommandBuilder\Standard;
+use Khalyomede\CommandBuilder\Command;
+use Khalyomede\CommandBuilder\Standard;
 
 test("can output simple command", function (): void {
     expect((string) new Command("composer"))->toEqual("composer");

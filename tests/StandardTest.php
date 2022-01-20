@@ -1,6 +1,6 @@
 <?php
 
-use CommandBuilder\Standard;
+use Khalyomede\CommandBuilder\Standard;
 
 test("have GNU style", function (): void {
     expect(Standard::GNU)->toEqual("GNU");
