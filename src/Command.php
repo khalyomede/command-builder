@@ -56,6 +56,11 @@ final class Command
         return count(array_filter($this->elements, fn (Element $element): bool => $element->isOption() && in_array($element->name(), [$short, $long], true))) === 1;
     }
 
+    public function optionCount(): int
+    {
+        return count(array_filter($this->elements, fn (Element $element): bool => $element->isOption()));
+    }
+
     public function flag(string $name): self
     {
         $this->elements[] = new Element($this->style, ElementType::FLAG, $name, "");

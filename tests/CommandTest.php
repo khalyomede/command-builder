@@ -176,3 +176,15 @@ test("returns number of flags", function (): void {
 
     expect($command->flagCount())->toEqual(2);
 });
+
+test("returns number of options", function (): void {
+    $command = new Command("composer");
+
+    $command
+        ->argument("require")
+        ->argument("laravel/laravel")
+        ->longOption("apcu-prefix", "flag")
+        ->longOption("ignore-platform-req", "hhvm");
+
+    expect($command->optionCount())->toEqual(2);
+});
