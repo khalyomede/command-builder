@@ -166,7 +166,10 @@ $command->argument("require")
 
 echo $command; // composer require -p source
 
-$command->style("gnu");
+$command = new Command("composer")
+
+$command->argument("require")
+  ->option("p", 'source');
 
 echo $command; // composer require -p=source
 ```
