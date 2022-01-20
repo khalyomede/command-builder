@@ -164,3 +164,15 @@ test("returns number of arguments", function (): void {
 
     expect($command->argumentCount())->toEqual(2);
 });
+
+test("returns number of flags", function (): void {
+    $command = new Command("composer");
+
+    $command
+        ->argument("require")
+        ->argument("laravel/laravel")
+        ->longFlag("dev")
+        ->longFlag("prefer-dist");
+
+    expect($command->flagCount())->toEqual(2);
+});

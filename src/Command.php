@@ -74,4 +74,9 @@ final class Command
     {
         return count(array_filter($this->elements, fn (Element $element): bool => $element->isFlag() && in_array($element->name(), [$short, $long], true))) === 1;
     }
+
+    public function flagCount(): int
+    {
+        return count(array_filter($this->elements, fn (Element $element): bool => $element->isFlag()));
+    }
 }
