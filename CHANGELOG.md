@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-01-20
+
 ### Added
 
 - `$command->argumentCount()` to get the number of arguments ([dafdb94](https://github.com/khalyomede/command-builder/commit/dafdb9469c5cc8ee64135a8ce2754d14c51b75bf)).
