@@ -25,7 +25,7 @@
         "phpstan/phpstan-strict-rules": "1.1.0",
         "thibautselingue/local-php-security-checker-installer": "1.0.3",
         "friendsofphp/php-cs-fixer": "3.5.0",
-        "infection/infection": "^0.26.1"
+        "infection/infection": "0.26.2"
     },
     "config": {
         "allow-plugins": {
